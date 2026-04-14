@@ -1,4 +1,1 @@
-# test_python
-
-# 테스트 파이썬.
-# 파이썬 실험 코드 나열한 것.
+# Python 관련 코딩 Commit
