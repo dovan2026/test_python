@@ -17,7 +17,7 @@ def solution(lottos, win_nums):
     
     return [high, low]
 
-
+# 틀린 오답
 # def solution(lottos, win_nums):
 #     answer = []
     
