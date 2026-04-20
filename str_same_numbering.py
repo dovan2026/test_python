@@ -15,6 +15,20 @@ def solution(s):
             
     return answer # 최종 결과 반환
 
+# 다른 방법
+# def solution(s):
+#     answer = []
+#     last = {}
+
+#     for i, ch in enumerate(s):
+#         if ch in last:
+#             answer.append(i - last[ch])
+#         else:
+#             answer.append(-1)
+#         last[ch] = i
+
+#     return answer
+
 # 모범 답안(배운 것들 바탕)
 # def solution(s):
 #     answer = []
