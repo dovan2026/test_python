@@ -1,32 +1,19 @@
 def solution(s, n):
     answer = ''
-    alphabet = {1 : a,
-               2 : b,
-               3 : c,
-               4 : d,
-               5 : e,
-               6 : f,
-               7 : g,
-               8 : h,
-               9 : i,
-               10 : j,
-               11 : k,
-               12 : l,
-               13 : m,
-               14 : n,
-               15 : o,
-               16 : p,
-               17 : q,
-                18 : r,
-                19 : s,
-                20 : t,
-                21 : u,
-                22 : v,
-                23 : w,
-                24 : x,
-                25 : y,
-                26 : z
-               }
-    if s[::-1][0] in alphabet.value():
-        
+    
+    # 딕셔너리 대신 문자열 인덱스(0~25)를 사용하여 매핑 구조를 대체
+    lower_alpha = 'abcdefghijklmnopqrstuvwxyz'
+    upper_alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    
+    for char in s:
+        if char in lower_alpha:
+            # 현재 문자의 인덱스를 찾고 n을 더한 뒤 26으로 나눈 나머지로 순환
+            new_idx = (lower_alpha.index(char) + n) % 26
+            answer += lower_alpha[new_idx]
+        elif char in upper_alpha:
+            new_idx = (upper_alpha.index(char) + n) % 26
+            answer += upper_alpha[new_idx]
+        else:
+            answer += char  # 공백인 경우 그대로 추가
+            
     return answer
